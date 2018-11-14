@@ -1,0 +1,20 @@
+h1 {
+    font-family: "Raleway", sans-serif
+}
+
+body {
+    text-align: center
+}
+
+.thumb {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.thumb:hover {
+    opacity: 1;
+}
+
+.rounded {
+    border-radius: 10px;
+}

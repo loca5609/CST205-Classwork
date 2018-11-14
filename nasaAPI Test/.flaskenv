@@ -1,0 +1,2 @@
+FLASK_APP=app/nasa.py 
+FLASK_DEBUG=1

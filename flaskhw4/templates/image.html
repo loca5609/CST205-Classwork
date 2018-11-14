@@ -1,0 +1,31 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/image.css') }}">
+{% endblock head %}
+
+{% block title %}
+Homework 4
+{% endblock title %}
+
+{% block content %}
+{% if image == '1' %}<h1>The Eastern Building</h1>{% endif %}
+{% if image == '2' %}<h1>A Beautiful Beach</h1>{% endif %}
+{% if image == '3' %}<h1>Cacti and the Ocean</h1>{% endif %}
+{% if image == '4' %}<h1>Accidental Wes Anderson</h1>{% endif %}
+{% if image == '5' %}<h1>The River Bridge</h1>{% endif %}
+{% if image == '6' %}<h1>Narrow Steps</h1>{% endif %}
+{% if image == '7' %}<h1>3 Windows</h1>{% endif %}
+{% if image == '8' %}<h1>Mural</h1>{% endif %}
+{% if image == '9' %}<h1>Subway Halls</h1>{% endif %}
+{% if image == '10' %}<h1>Dense Library</h1>{% endif %}
+
+
+<img class="rounded" src="{{ url_for('static', filename=image) }}.jpg" ><br>
+{{details}}<br><br>
+
+<a href="{{ url_for('main') }}">Back to list of images</a>
+
+{% endblock content %}
+

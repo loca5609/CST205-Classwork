@@ -1,0 +1,22 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+{% endblock head %}
+
+
+{% block title %}
+Homework 4
+{% endblock title %}
+
+{% block content %}
+<h1>Homework 4 Image Gallery</h1>
+{% for img in images %}
+    <a href="{{url_for('image',image=img+1)}}">
+        <img class="thumb rounded" id='img' src="{{url_for('static', filename=img+1)}}.jpg" width=200><br>
+    </a>
+{% endfor %}
+
+
+{% endblock content %}

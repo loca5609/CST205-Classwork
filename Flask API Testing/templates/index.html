@@ -1,0 +1,23 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+  API Testing
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <h1>Exchange Rates</h1>
+  
+  {% if data %}
+   <p>The exchange rates for $1 USD on {{data['date']}} are:</p>
+   {{ keys[] }}
+   {% for i in keys %}
+    
+        <strong>{{ i }} : </strong> {{ data['rates'][i] }} <br>
+   {% endfor %}
+   {% endif %} 
+  
+
+</div>
+{% endblock %}
